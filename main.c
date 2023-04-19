@@ -22,6 +22,12 @@ int main(int argc, char* argv[]) {
 
 	int no = atoi(argv[1]);
 
+	if (no < 0) {
+		err("Value negative");
+
+		return 1;
+	}
+
 	char str[no + 1];
 	for (int i = 0; i < no; i++) {
 		str[i] = seg;
